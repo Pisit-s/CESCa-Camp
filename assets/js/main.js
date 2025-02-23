@@ -146,6 +146,46 @@
     }
   });
 
+
+  function parseThaiDate(thaiDateStr) {
+    const months = {
+        'มกราคม': '01',
+        'กุมภาพันธ์': '02',
+        'มีนาคม': '03',
+        'เมษายน': '04',
+        'พฤษภาคม': '05',
+        'มิถุนายน': '06',
+        'กรกฎาคม': '07',
+        'สิงหาคม': '08',
+        'กันยายน': '09',
+        'ตุลาคม': '10',
+        'พฤศจิกายน': '11',
+        'ธันวาคม': '12'
+    };
+
+    const parts = thaiDateStr.split(' ');
+    const day = parts[0].trim().padStart(2, '0');
+    const month = months[parts[1].trim()];
+    const year = (parseInt(parts[2]) - 543).toString();
+
+    return new Date(`${year}-${month}-${day}`);
+}
+
+function checkDates() {
+    const today = new Date();
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        const dateText = item.querySelector('.timeline-date').textContent;
+        const dateRangeParts = dateText.split(' - ');
+        const endDate = parseThaiDate(dateRangeParts[dateRangeParts.length - 1]);
+
+        if (today > endDate) {
+            item.classList.add('passed');
+        }
+    });
+}
+
+checkDates();
+
   /**
    * Navmenu Scrollspy
    */
