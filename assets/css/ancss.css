@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mitr', sans-serif;
+    background: url('../img/bg.gif') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.list-box {
+    background: rgba(100, 0, 200, 0.8);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 30px;
+    width: 60%;
+}
+
+h1 {
+    background: white;
+    color: black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    font-size: 1.5em;
+}
+
+table {
+    border-collapse: separate; 
+    border-spacing: 15px;
+    margin: 0 auto;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th:first-child, td:first-child { 
+    width: 50px;
+}
+
+th:nth-child(2), td:nth-child(2),
+th:nth-child(3), td:nth-child(3) 
+{
+    width: calc((100% - 50px) / 2); 
+}
+
+button {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 5px 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+    font-weight: bold;
+}
+
+button.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .list-box {
+        width: 80%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .list-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    th, td {
+        padding: 5px;
+        font-size: 0.5em;
+    }
+
+    th:first-child, td:first-child { 
+        width: 40px;
+    }
+
+    th:nth-child(2), td:nth-child(2),
+    th:nth-child(3), td:nth-child(3) 
+    {
+        width: calc((100% - 40px) / 2); 
+    }
+}
