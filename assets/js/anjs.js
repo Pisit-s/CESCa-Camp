@@ -1,7 +1,7 @@
 
 const names = [
     { id: 1, name: "Phattharaphoom Kalayawangsa", school: "โรงเรียน A" },
-    { id: 2, name: "สมหญิง รักเรียน", school: "โรงเรียนกฺุฉินารายณ์" },
+    { id: 2, name: "นายพิสิษฐ์ ศรีชำนาจ", school: "โรงเรียนกุฉินารายณ์" },
     { id: 3, name: "อนันต์ ขยันดี", school: "โรงเรียน C" },
     { id: 4, name: "ก้องเกียรติ วิริยะ", school: "โรงเรียน D" },
     { id: 5, name: "มัณฑนา ทองแท้", school: "โรงเรียน E" },
@@ -69,6 +69,8 @@ prevBtn.addEventListener("click", () => {
     if (currentPage > 1) {
         currentPage--;
         renderPage(currentPage);
+    } else {
+        window.location.href = "index.html";
     }
 });
 

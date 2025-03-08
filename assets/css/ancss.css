@@ -25,21 +25,25 @@ body {
     padding: 30px;
     text-align: center;
     border-radius: 30px;
-    width: 60%;
+    width: 80%;
+    max-width: 900px; 
+    position: relative;
 }
 
 h1 {
-    background: white;
-    color: black;
+    background: rgba(144, 87, 201, 0.8);
+    color: #ffbf00;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 30px;
     font-size: 1.5em;
+    box-shadow: 0 2px 10px rgb(255, 255, 255);
+    border: 2px solid #efb300;
 }
 
 table {
     border-collapse: separate; 
-    border-spacing: 15px;
+    border-spacing: 10px; 
     margin: 0 auto;
     width: 100%;
     table-layout: fixed;
@@ -61,29 +65,62 @@ th:first-child, td:first-child {
 }
 
 th:nth-child(2), td:nth-child(2),
-th:nth-child(3), td:nth-child(3) 
-{
+th:nth-child(3), td:nth-child(3) {
     width: calc((100% - 50px) / 2); 
 }
 
 button {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    padding: 5px 15px;
+    padding: 10px 15px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    margin: 10px;
+    margin: 2px;
     font-weight: bold;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
-button.hidden {
-    display: none;
+button:hover {
+    color: #efb300;
+    background-color: color-mix(in srgb, rgba(144, 87, 201, 0.8), black 20%);
+    transform: scale(1.1);
+    border: 2px solid #efb300;
+    box-shadow: 0 2px 10px rgb(255, 255, 255);
 }
 
+.button-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.button-link {
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+.button-link:hover {
+    color: #efb300;
+    background-color: color-mix(in srgb, rgba(144, 87, 201, 0.8), black 20%);
+    transform: scale(1.1);
+    border: 2px solid #efb300;
+    box-shadow: 0 2px 10px rgb(255, 255, 255);
+}
+
+
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .list-box {
-        width: 80%;
+        width: 90%;
         padding: 20px;
     }
 
@@ -98,8 +135,10 @@ button.hidden {
 
 @media (max-width: 480px) {
     .list-box {
-        width: 90%;
+        width: 95%;
         padding: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     h1 {
@@ -116,8 +155,16 @@ button.hidden {
     }
 
     th:nth-child(2), td:nth-child(2),
-    th:nth-child(3), td:nth-child(3) 
-    {
+    th:nth-child(3), td:nth-child(3) {
         width: calc((100% - 40px) / 2); 
+    }
+
+    .button-container {
+        align-items: center;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 10px;
+
     }
 }
