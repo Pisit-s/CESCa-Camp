@@ -82,3 +82,5 @@ nextBtn.addEventListener("click", () => {
 });
 
 renderPage(currentPage);
+
+
