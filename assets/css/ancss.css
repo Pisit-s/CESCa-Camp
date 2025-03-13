@@ -150,6 +150,38 @@ button:hover {
     box-shadow: 0 2px 15px rgb(255, 255, 255);
 }
 
+@media screen and (max-width: 1920px) {
+    .list-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+    
+}
+
+@media screen and (max-width: 1366px) {
+    .list-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+    
+}
+
 @media screen and (max-width: 1024px) {
     .list-box {
         width: 90%;
