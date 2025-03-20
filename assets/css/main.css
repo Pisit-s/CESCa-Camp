@@ -1,7 +1,13 @@
 
 /* Fonts */
 
+@font-face {
+  font-family: 'SarunHarryPotter';
+  src: url('../fonts/SarunHarryPotter.ttf') format('truetype');
+}
+
 :root {
+  --harrypotter-font: "SarunHarryPotter" , sans-serif;
   --almendra-font: "Almendra" , sans-serif;
   --mitr-font: "Mitr" , sans-serif;
 }
@@ -701,11 +707,20 @@ section,
 }
 
 .section-title h2 {
-  font-size: 50px;
+  font-size: 5rem;
   font-weight: 700;
+  font-family: var(--harrypotter-font);
+  letter-spacing: 10px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+}
+
+@media (max-width: 500px) {
+  .section-title h2 {
+    font-size: 3rem;
+  }
+  
 }
 
 .section-title h2:after {
@@ -760,10 +775,12 @@ section,
 
 .hero .hero-content h1 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   margin-top: -30px;
+  font-family: var(--harrypotter-font);
+  letter-spacing: 2px;
   
 }
 
@@ -1058,6 +1075,8 @@ section,
   font-size: 0.9rem;
   text-indent: 1.5rem;
   line-height: 1.5rem;
+  letter-spacing: 1px;
+  margin-left: 5px;
   
 }
 
@@ -1106,10 +1125,12 @@ section,
   margin-bottom: 1rem;
   line-height: 1.2;
   font-weight: 700;
+  font-family: var(--harrypotter-font);
+  letter-spacing: 2px;
 }
 
 .about .about-description {
-  font-size: 1rem;
+  margin-left: 20px;
 }
 
 @media (max-width: 992px) {
@@ -1122,6 +1143,8 @@ section,
 .about .about-description {
   margin-top: 1rem;
   margin-bottom: 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
   color: color-mix(in srgb, var(--white-color), transparent 10%);
   text-indent: 2.5em;
 }
@@ -1394,6 +1417,7 @@ section,
   .features-cards .testimonial-item p {
     font-size: 1rem;
     max-width: 100%;
+    
   }
 }
 
@@ -1444,6 +1468,7 @@ section,
   padding: 0;
   max-width: 90%;
   line-height: 1.5rem;
+  letter-spacing: 0.5px;
 }
 
 /*--------------------------------------------------------------
@@ -1989,7 +2014,8 @@ section,
 
 .faq .faq-container .faq-item h3 {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
+  letter-spacing: 1px;
   line-height: 24px;
   margin: 0 30px 0 0;
   transition: 0.5s;
@@ -2009,6 +2035,12 @@ section,
   font-family: var(--mitr-font);
 }
 
+@media (max-width: 575px) {
+  .faq .faq-container .faq-item h3 {
+    font-size: 15px;
+  }
+  
+}
 
 .faq .faq-container .faq-item .faq-content {
   display: grid;
@@ -2021,13 +2053,15 @@ section,
 .faq .faq-container .faq-item .faq-content p {
   margin-bottom: 0;
   overflow: hidden;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .faq .faq-container .faq-item .faq-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 0;
   transition: 0.3s;
   cursor: pointer;
